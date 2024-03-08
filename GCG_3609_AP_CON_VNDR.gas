@@ -1,0 +1,629 @@
+Program.Sub.ScreenSU.Start
+gui.SS_Form1..create
+gui.SS_Form1..caption("Vendor Masters")
+gui.SS_Form1..size(6160,4810)
+gui.SS_Form1..minx(0)
+gui.SS_Form1..miny(0)
+gui.SS_Form1..position(0,0)
+gui.SS_Form1..event(unload,ss_form1_unload)
+gui.SS_Form1..alwaysontop(False)
+gui.SS_Form1..fontname("Arial")
+gui.SS_Form1..fontsize(8)
+gui.SS_Form1..forecolor(0)
+gui.SS_Form1..fontstyle(,,,,)
+gui.SS_Form1..BackColor(-2147483633)
+gui.SS_Form1..controlbox(True)
+gui.SS_Form1..maxbutton(False)
+gui.SS_Form1..minbutton(False)
+gui.SS_Form1..mousepointer(0)
+gui.SS_Form1..moveable(True)
+gui.SS_Form1..sizeable(False)
+gui.SS_Form1..ShowInTaskBar(True)
+gui.SS_Form1..titlebar(True)
+gui.SS_Form1.lbl_txt1_BegVendor.create(label,"Beginning Vendor",True,1800,200,1,100,135,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.lbl_txt1_BegVendor.SetInternationalID(64300)
+gui.SS_Form1.lbl_txt1_BegVendor.defaultvalue("")
+gui.SS_Form1.lbl_txt1_BegVendor.controlgroup(0)
+gui.SS_Form1.txt1_BegVendor.create(textbox,"",True,1800,330,1,100,335,True,0,Arial,8,16777215,1)
+gui.SS_Form1.txt1_BegVendor.event(gotfocus,txt1_begvendor_gotfocus)
+gui.SS_Form1.txt1_BegVendor.event(lostfocus,txt1_begvendor_lostfocus)
+gui.SS_Form1.txt1_BegVendor.defaultvalue("")
+gui.SS_Form1.txt1_BegVendor.controlgroup(0)
+gui.SS_Form1.cmd_txt1_BegVendor.create(button)
+gui.SS_Form1.cmd_txt1_BegVendor.caption("^")
+gui.SS_Form1.cmd_txt1_BegVendor.visible(True)
+gui.SS_Form1.cmd_txt1_BegVendor.size(330,330)
+gui.SS_Form1.cmd_txt1_BegVendor.zorder(0)
+gui.SS_Form1.cmd_txt1_BegVendor.position(1985,335)
+gui.SS_Form1.cmd_txt1_BegVendor.enabled(True)
+gui.SS_Form1.cmd_txt1_BegVendor.fontname("Arial")
+gui.SS_Form1.cmd_txt1_BegVendor.fontsize(8)
+gui.SS_Form1.cmd_txt1_BegVendor.event(click,cmd_txt1_begvendor_click)
+gui.SS_Form1.cmd_txt1_BegVendor.defaultvalue("")
+gui.SS_Form1.cmd_txt1_BegVendor.controlgroup(0)
+gui.SS_Form1.lbl_txt2_EndVendor.create(label,"Ending Vendor",True,1800,200,1,2455,135,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.lbl_txt2_EndVendor.SetInternationalID(216900)
+gui.SS_Form1.lbl_txt2_EndVendor.defaultvalue("")
+gui.SS_Form1.lbl_txt2_EndVendor.controlgroup(0)
+gui.SS_Form1.txt2_EndVendor.create(textbox,"",True,1800,330,1,2455,335,True,0,Arial,8,16777215,1)
+gui.SS_Form1.txt2_EndVendor.event(gotfocus,txt2_endvendor_gotfocus)
+gui.SS_Form1.txt2_EndVendor.defaultvalue("")
+gui.SS_Form1.txt2_EndVendor.controlgroup(0)
+gui.SS_Form1.cmd_txt2_EndVendor.create(button)
+gui.SS_Form1.cmd_txt2_EndVendor.caption("^")
+gui.SS_Form1.cmd_txt2_EndVendor.visible(True)
+gui.SS_Form1.cmd_txt2_EndVendor.size(330,330)
+gui.SS_Form1.cmd_txt2_EndVendor.zorder(0)
+gui.SS_Form1.cmd_txt2_EndVendor.position(4340,335)
+gui.SS_Form1.cmd_txt2_EndVendor.enabled(True)
+gui.SS_Form1.cmd_txt2_EndVendor.fontname("Arial")
+gui.SS_Form1.cmd_txt2_EndVendor.fontsize(8)
+gui.SS_Form1.cmd_txt2_EndVendor.event(click,cmd_txt2_endvendor_click)
+gui.SS_Form1.cmd_txt2_EndVendor.defaultvalue("")
+gui.SS_Form1.cmd_txt2_EndVendor.controlgroup(0)
+gui.SS_Form1.chk1_AllVendors.create(checkbox)
+gui.SS_Form1.chk1_AllVendors.caption("All_Vendors")
+gui.SS_Form1.chk1_AllVendors.visible(True)
+gui.SS_Form1.chk1_AllVendors.size(1800,300)
+gui.SS_Form1.chk1_AllVendors.zorder(0)
+gui.SS_Form1.chk1_AllVendors.position(100,670)
+gui.SS_Form1.chk1_AllVendors.enabled(True)
+gui.SS_Form1.chk1_AllVendors.alignment(0)
+gui.SS_Form1.chk1_AllVendors.fontname("Arial")
+gui.SS_Form1.chk1_AllVendors.fontsize(8)
+gui.SS_Form1.chk1_AllVendors.event(click,chk1_allvendors_click)
+gui.SS_Form1.chk1_AllVendors.SetInternationalID(681007)
+gui.SS_Form1.chk1_AllVendors.defaultvalue("")
+gui.SS_Form1.chk1_AllVendors.controlgroup(0)
+gui.SS_Form1.lvw1_Vendor.create(listview)
+gui.SS_Form1.lvw1_Vendor.view(3)
+gui.SS_Form1.lvw1_Vendor.addlistviewcolumn(variable.Translation.64300,2705,0)
+gui.SS_Form1.lvw1_Vendor.addlistviewcolumn(variable.Translation.216900,2705,0)
+gui.SS_Form1.lvw1_Vendor.visible(True)
+gui.SS_Form1.lvw1_Vendor.size(5810,2000)
+gui.SS_Form1.lvw1_Vendor.zorder(0)
+gui.SS_Form1.lvw1_Vendor.position(100,1220)
+gui.SS_Form1.lvw1_Vendor.enabled(True)
+gui.SS_Form1.lvw1_Vendor.fontname("Arial")
+gui.SS_Form1.lvw1_Vendor.fontsize(8)
+gui.SS_Form1.cmd_lvw1_VendorAdd.create(button)
+gui.SS_Form1.cmd_lvw1_VendorAdd.caption("Add")
+gui.SS_Form1.cmd_lvw1_VendorAdd.visible(True)
+gui.SS_Form1.cmd_lvw1_VendorAdd.size(1000,330)
+gui.SS_Form1.cmd_lvw1_VendorAdd.zorder(0)
+gui.SS_Form1.cmd_lvw1_VendorAdd.position(4810,335)
+gui.SS_Form1.cmd_lvw1_VendorAdd.enabled(True)
+gui.SS_Form1.cmd_lvw1_VendorAdd.fontname("Arial")
+gui.SS_Form1.cmd_lvw1_VendorAdd.fontsize(8)
+gui.SS_Form1.cmd_lvw1_VendorAdd.event(click,cmd_lvw1_vendoradd_click)
+gui.SS_Form1.cmd_lvw1_VendorAdd.SetInternationalID(7600)
+gui.SS_Form1.cmd_lvw1_VendorAdd.defaultvalue("")
+gui.SS_Form1.cmd_lvw1_VendorAdd.controlgroup(0)
+gui.SS_Form1.cmd_lvw1_VendorDelete.create(button)
+gui.SS_Form1.cmd_lvw1_VendorDelete.caption("Delete")
+gui.SS_Form1.cmd_lvw1_VendorDelete.visible(True)
+gui.SS_Form1.cmd_lvw1_VendorDelete.size(1000,330)
+gui.SS_Form1.cmd_lvw1_VendorDelete.zorder(0)
+gui.SS_Form1.cmd_lvw1_VendorDelete.position(100,3305)
+gui.SS_Form1.cmd_lvw1_VendorDelete.enabled(True)
+gui.SS_Form1.cmd_lvw1_VendorDelete.fontname("Arial")
+gui.SS_Form1.cmd_lvw1_VendorDelete.fontsize(8)
+gui.SS_Form1.cmd_lvw1_VendorDelete.event(click,cmd_lvw1_vendordelete_click)
+gui.SS_Form1.cmd_lvw1_VendorDelete.SetInternationalID(171500)
+gui.SS_Form1.cmd_lvw1_VendorDelete.defaultvalue("")
+gui.SS_Form1.cmd_lvw1_VendorDelete.controlgroup(0)
+gui.SS_Form1.cmd_lvw1_VendorClear.create(button)
+gui.SS_Form1.cmd_lvw1_VendorClear.caption("Clear")
+gui.SS_Form1.cmd_lvw1_VendorClear.visible(True)
+gui.SS_Form1.cmd_lvw1_VendorClear.size(1000,330)
+gui.SS_Form1.cmd_lvw1_VendorClear.zorder(0)
+gui.SS_Form1.cmd_lvw1_VendorClear.position(1185,3305)
+gui.SS_Form1.cmd_lvw1_VendorClear.enabled(True)
+gui.SS_Form1.cmd_lvw1_VendorClear.fontname("Arial")
+gui.SS_Form1.cmd_lvw1_VendorClear.fontsize(8)
+gui.SS_Form1.cmd_lvw1_VendorClear.event(click,cmd_lvw1_vendorclear_click)
+gui.SS_Form1.cmd_lvw1_VendorClear.SetInternationalID(106700)
+gui.SS_Form1.cmd_lvw1_VendorClear.defaultvalue("")
+gui.SS_Form1.cmd_lvw1_VendorClear.controlgroup(0)
+gui.SS_Form1.cmd1_Print.create(button)
+gui.SS_Form1.cmd1_Print.caption("Print")
+gui.SS_Form1.cmd1_Print.visible(True)
+gui.SS_Form1.cmd1_Print.size(1000,360)
+gui.SS_Form1.cmd1_Print.zorder(0)
+gui.SS_Form1.cmd1_Print.position(100,3835)
+gui.SS_Form1.cmd1_Print.enabled(True)
+gui.SS_Form1.cmd1_Print.fontname("Arial")
+gui.SS_Form1.cmd1_Print.fontsize(8)
+gui.SS_Form1.cmd1_Print.event(click,cmd1_print_click)
+gui.SS_Form1.cmd1_Print.SetInternationalID(452800)
+gui.SS_Form1.cmd1_Print.defaultvalue("")
+gui.SS_Form1.cmd1_Print.controlgroup(0)
+gui.SS_Form1.txt1_BegVendor.tabstop(true)
+gui.SS_Form1.txt1_BegVendor.tabindex(1)
+gui.SS_Form1.cmd_txt1_BegVendor.tabstop(true)
+gui.SS_Form1.cmd_txt1_BegVendor.tabindex(2)
+gui.SS_Form1.txt2_EndVendor.tabstop(true)
+gui.SS_Form1.txt2_EndVendor.tabindex(3)
+gui.SS_Form1.cmd_txt2_EndVendor.tabstop(true)
+gui.SS_Form1.cmd_txt2_EndVendor.tabindex(4)
+gui.SS_Form1.cmd_lvw1_VendorAdd.tabstop(true)
+gui.SS_Form1.cmd_lvw1_VendorAdd.tabindex(5)
+gui.SS_Form1.chk1_AllVendors.tabstop(true)
+gui.SS_Form1.chk1_AllVendors.tabindex(6)
+gui.SS_Form1.cmd1_Print.tabstop(true)
+gui.SS_Form1.cmd1_Print.tabindex(7)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.Global.iKey.Declare(Long,0)
+Variable.Global.lBIRunID.Declare(Long,0)
+Variable.Global.lLogID.Declare(Long,0)
+Variable.UDT.uVendor.Define("lBIRunID",Long)
+Variable.UDT.uVendor.Define("sVendor",String,"Vendor")
+Variable.UDT.uVendor.Define("sName_Vendor",String,"Name_Vendor")
+Variable.UDT.uVendor.Define("sAddress1",String,"Address1")
+Variable.UDT.uVendor.Define("sCity",String,"City")
+Variable.UDT.uVendor.Define("sState",String,"State")
+Variable.UDT.uVendor.Define("sCode_Zip",String,"Code_Zip")
+Variable.UDT.uVendor.Define("sBuy_Phone",String,"Buy_Phone")
+Variable.UDT.uVendor.Define("sBuy_Fax",String,"Buy_Fax")
+Variable.uGlobal.uVendor.Declare("uVendor")
+Variable.Global.lMultiVendor.Declare(Long,0)
+Variable.Global.sVendorSelection.Declare(String)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'open connection
+F.ODBC.connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.puser,V.Ambient.PPass)
+gui.SS_Form1..applytranslation
+
+Gui.SS_Form1..show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3609_AP_CON_VNDR.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+program.sub.txt1_begvendor_gotfocus.start
+F.Intrinsic.Control.SetErrorHandler("txt1_begvendor_gotfocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.SS_Form1.txt1_BegVendor.SelectAll
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txt1_begvendor_gotfocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3609_AP_CON_VNDR.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.txt1_begvendor_gotfocus.end
+
+program.sub.txt1_begvendor_lostfocus.start
+F.Intrinsic.Control.SetErrorHandler("txt1_begvendor_lostfocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.SS_Form1.txt2_EndVendor.Text(V.Screen.SS_Form1!txt1_BegVendor.Text)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txt1_begvendor_lostfocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3609_AP_CON_VNDR.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.txt1_begvendor_lostfocus.end
+
+program.sub.cmd_txt1_begvendor_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_txt1_begvendor_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+
+F.Intrinsic.UI.Browser(300,"",V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.SS_Form1.txt1_BegVendor.Text(V.Local.sRet.Trim)
+	Gui.SS_Form1.txt2_EndVendor.Text(V.Screen.SS_Form1!txt1_BegVendor.Text)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txt1_begvendor_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3609_AP_CON_VNDR.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_txt1_begvendor_click.end
+
+program.sub.txt2_endvendor_gotfocus.start
+F.Intrinsic.Control.SetErrorHandler("txt2_endvendor_gotfocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.SS_Form1.txt2_EndVendor.SelectAll
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txt2_endvendor_gotfocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3609_AP_CON_VNDR.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.txt2_endvendor_gotfocus.end
+
+program.sub.cmd_txt2_endvendor_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_txt2_endvendor_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+
+F.Intrinsic.UI.Browser(300,"",V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.SS_Form1.txt2_EndVendor.Text(V.Local.sRet.Trim)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txt2_endvendor_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3609_AP_CON_VNDR.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_txt2_endvendor_click.end
+
+program.sub.cmd_lvw1_vendoradd_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_lvw1_vendoradd_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.SS_Form1!txt1_BegVendor,<,"","AND",V.Screen.SS_Form1!txt2_EndVendor,<,"")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Math.Add(V.Global.iKey,1,V.Global.iKey)
+Gui.SS_Form1.lvw1_Vendor.AddListItem(V.Global.iKey,V.Screen.SS_Form1!txt1_BegVendor.Text)
+Gui.SS_Form1.lvw1_Vendor.SetListItemSubItemText(V.Global.iKey,1,V.Screen.SS_Form1!txt2_EndVendor.Text)
+Gui.SS_Form1.txt1_BegVendor.Text("")
+Gui.SS_Form1.txt2_EndVendor.Text("")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvw1_vendoradd_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3609_AP_CON_VNDR.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_lvw1_vendoradd_click.end
+
+program.sub.cmd_lvw1_vendordelete_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_lvw1_vendordelete_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iKey.Declare(Long)
+
+V.Local.iKey.Set(V.Screen.SS_Form1!lvw1_Vendor.SelectedItemKey)
+Gui.SS_Form1.lvw1_Vendor.RemoveItem(V.Local.iKey)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvw1_vendordelete_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3609_AP_CON_VNDR.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_lvw1_vendordelete_click.end
+
+program.sub.cmd_lvw1_vendorclear_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_lvw1_vendorclear_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.SS_Form1.lvw1_Vendor.ClearItems
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvw1_vendorclear_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3609_AP_CON_VNDR.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_lvw1_vendorclear_click.end
+
+program.sub.cmd1_print_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd1_print_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.iOrd.Declare(Long)
+V.Local.sRange.Declare(String)
+V.Local.sRows.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.sTemp.Declare(String)
+
+
+'Disappear the screen
+Gui.SS_Form1..Visible(False)
+
+F.Global.BI.GetRunID(V.Global.lBIRunID)
+F.Intrinsic.Control.If(V.Ambient.IsInIDE,=,True)
+        F.Global.BI.StartLogging(V.global.lBIRunID,9065,0,"",V.global.lLogID)
+F.Intrinsic.Control.Else
+       F.Global.BI.StartLogging(V.global.lBIRunID,-1,-1,"",V.global.lLogID)
+F.Intrinsic.Control.EndIf
+
+V.uGlobal.uVendor.Redim(-1,-1)
+
+'check if all vendors selected
+F.Intrinsic.Control.If(V.Screen.ss_form1!chk1_AllVendors.value,=,1)
+	F.Intrinsic.String.Build("Select a.vendor, name_vendor, address1, city, state, code_zip,buy_phone,buy_fax from v_vendor_master a left join v_vend_mstr_addl b on a.vendor = b.vend_no where vendor <> ' ' order by a.vendor","",V.Local.sSql)
+
+	'save records to recordset
+	F.ODBC.Connection!conx.OpenLocalRecordsetRW("rstVend",V.Local.sSql)
+	F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstVend","V.uGlobal.uVendor",False,0)
+	F.ODBC.conx!rstVend.Close
+
+F.Intrinsic.Control.Else
+
+	' Spin through listview of vendors
+	Gui.SS_Form1.lvw1_Vendor.RetrieveAllListItems(V.Local.sRows)
+	F.Intrinsic.Control.If(V.local.sRows,<>,"***NORETURN***")
+		F.Intrinsic.String.Split(V.Local.sRows,"*!*",V.Local.sRows)
+		F.Intrinsic.Control.For(V.Local.iC,0,V.Local.sRows.UBound,1)
+		Gui.SS_Form1.lvw1_Vendor.RetrieveItemOrdinal(V.Local.sRows(V.Local.iC),V.Local.iOrd)
+		V.Local.srange.Set(V.Screen.SS_Form1!lvw1_Vendor.ListItemTextExtended(V.Local.iOrd))
+		F.Intrinsic.String.Split(V.Local.sRange,"*!*",V.Local.sRange)
+		F.Intrinsic.String.Build("{0} - {1}",V.Local.sRange(0),V.Local.sRange(1),V.Global.sVendorSelection)
+		F.Intrinsic.Control.If(V.Local.iC,>=,1)
+			V.Global.lMultiVendor.Set(1)
+		F.Intrinsic.Control.EndIf
+	
+		'build recordset by vendor range
+		F.Intrinsic.String.Build("Select a.vendor, name_vendor, address1, city, state, code_zip,buy_phone,buy_fax from v_vendor_master a left join v_vend_mstr_addl b on a.vendor = b.vend_no where a.vendor between '{0}' and '{1}' and a.vendor <> ' ' order by a.vendor",V.Local.sRange(0),V.Local.sRange(1),V.Local.sSql)
+
+		'save records to recordset
+		F.ODBC.Connection!conx.OpenLocalRecordsetRW("rstVend",V.Local.sSql)
+		F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstVend","V.uGlobal.uVendor",True,0)
+		F.ODBC.conx!rstVend.Close
+
+		F.Intrinsic.Control.Next(V.Local.iC)
+	F.Intrinsic.Control.Endif
+F.Intrinsic.Control.Endif
+
+V.Local.iC.Set(0)
+F.Intrinsic.Control.If(V.uGlobal.uVendor.UBound,<>,-1)
+	F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uVendor.UBound,1)
+		V.Local.sTemp.Set(V.uGlobal.uVendor(V.Local.iC)!sBuy_Phone)
+		F.Intrinsic.Control.If(V.Local.sTemp.Length,=,7)
+			F.Intrinsic.String.Format(V.Local.sTemp,"@@@-@@@@",V.Local.sTemp)
+			V.uGlobal.uVendor(V.Local.iC)!sBuy_Phone.Set(V.Local.sTemp.Trim)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.Local.sTemp.Length,=,10)
+			F.Intrinsic.String.Format(V.Local.sTemp,"@@@ @@@-@@@@",V.Local.sTemp)
+			V.uGlobal.uVendor(V.Local.iC)!sBuy_Phone.Set(V.Local.sTemp.Trim)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.Local.sTemp.Length,=,13)
+			F.Intrinsic.String.Format(V.Local.sTemp,"@@@ @@@ @@@-@@@@",V.Local.sTemp)
+			V.uGlobal.uVendor(V.Local.iC)!sBuy_Phone.Set(V.Local.sTemp.Trim)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.Local.sTemp.Length,<>,7,"AND",V.Local.sTemp.Length,<>,10)
+			F.Intrinsic.Control.If(V.Local.sTemp.Length,<>,13)
+				V.uGlobal.uVendor(V.Local.iC)!sBuy_Phone.Set(V.Local.sTemp.Trim)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		V.Local.sTemp.Set(V.uGlobal.uVendor(V.Local.iC)!sBuy_Fax)
+		F.Intrinsic.Control.If(V.Local.sTemp.Length,=,7)
+			F.Intrinsic.String.Format(V.Local.sTemp,"@@@-@@@@",V.Local.sTemp)
+			V.uGlobal.uVendor(V.Local.iC)!sBuy_Fax.Set(V.Local.sTemp.Trim)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.Local.sTemp.Length,=,10)
+			F.Intrinsic.String.Format(V.Local.sTemp,"@@@ @@@-@@@@",V.Local.sTemp)
+			V.uGlobal.uVendor(V.Local.iC)!sBuy_Fax.Set(V.Local.sTemp.Trim)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.Local.sTemp.Length,=,13)
+			F.Intrinsic.String.Format(V.Local.sTemp,"@@@ @@@ @@@-@@@@",V.Local.sTemp)
+			V.uGlobal.uVendor(V.Local.iC)!sBuy_Fax.Set(V.Local.sTemp.Trim)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.Local.sTemp.Length,<>,7,"AND",V.Local.sTemp.Length,<>,10)
+			F.Intrinsic.Control.If(V.Local.sTemp.Length,<>,13)
+				V.uGlobal.uVendor(V.Local.iC)!sBuy_Fax.Set(V.Local.sTemp.Trim)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		V.Local.sTemp.Set(V.uGlobal.uVendor(V.Local.iC)!sCode_Zip)
+		F.Intrinsic.Control.If(V.Local.sTemp.Length,=,9)
+			F.Intrinsic.String.Format(V.Local.sTemp,"@@@@@-@@@@",V.Local.sTemp)
+			V.uGlobal.uVendor(V.Local.iC)!sCode_Zip.Set(V.Local.sTemp.Trim)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.iC)
+	'set BIRunID
+	F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uVendor!lBIRunID,V.Global.lBIRunID)
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uVendor!lBIRunID,"BIRunID")
+F.Intrinsic.Control.EndIf
+
+'open z table
+F.ODBC.Connection!conx.OpenLocalRecordsetRW("rstZVend","GCG_3609_AP_CON_VNDR")
+	F.Intrinsic.Control.If(V.uGlobal.uVendor.UBound,<>,-1)
+		F.Intrinsic.Variable.SaveUDTToRecordSet("conx","rstZVend","V.uGlobal.uVendor")
+	F.Intrinsic.Control.EndIf
+F.ODBC.conx!rstZVend.Close
+
+F.Global.BI.StopLogging(V.Global.lLogID)
+
+F.Intrinsic.Control.CallSub(Callbi)
+
+F.Intrinsic.Control.CallSub(Ss_form1_unload)
+
+F.Intrinsic.Control.Label("cmd1_print_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3609_AP_CON_VNDR.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd1_print_click.end
+
+program.sub.ss_form1_unload.start
+F.Intrinsic.Control.SetErrorHandler("ss_form1_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ss_form1_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3609_AP_CON_VNDR.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.ss_form1_unload.end
+
+program.sub.chk1_allvendors_click.start
+F.Intrinsic.Control.SetErrorHandler("chk1_allvendors_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'All Vendors
+
+F.Intrinsic.Control.If(V.Screen.SS_Form1!chk1_AllVendors.Value,=,1)
+'	disable entry of vendor range
+	Gui.SS_Form1.txt1_BegVendor.Enabled(False)
+	Gui.SS_Form1.txt2_EndVendor.Enabled(False)
+	Gui.SS_Form1.cmd_txt1_BegVendor.Enabled(False)
+	Gui.SS_Form1.cmd_txt2_EndVendor.Enabled(False)
+	Gui.SS_Form1.cmd_lvw1_VendorAdd.Enabled(False)
+	Gui.ss_form1.cmd_lvw1_Vendorclear.Enabled(False)
+	Gui.ss_form1.cmd_lvw1_Vendordelete.Enabled(False)
+	Gui.SS_Form1.txt1_BegVendor.Text("")
+	Gui.SS_Form1.txt2_EndVendor.Text("")
+	Gui.SS_Form1.lvw1_Vendor.ClearItems
+
+F.Intrinsic.control.Else
+
+'	enable entry of vendor range
+	Gui.SS_Form1.txt1_BegVendor.Enabled(True)
+	Gui.SS_Form1.txt2_EndVendor.Enabled(True)
+	Gui.SS_Form1.cmd_txt1_BegVendor.Enabled(True)
+	Gui.SS_Form1.cmd_txt2_EndVendor.Enabled(True)
+	Gui.ss_form1.cmd_lvw1_Vendoradd.Enabled(True)
+	Gui.ss_form1.cmd_lvw1_Vendorclear.Enabled(True)
+	Gui.ss_form1.cmd_lvw1_Vendordelete.Enabled(True)
+	Gui.SS_Form1.lvw1_Vendor.ClearItems
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("chk1_allvendors_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3609_AP_CON_VNDR.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.chk1_allvendors_click.end
+
+Program.Sub.CallBI.Start
+F.Intrinsic.Control.SetErrorHandler("CallBI_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sValues.Declare(String)
+V.Local.sParams.Declare(String)
+V.Local.iRet.Declare(Long)
+
+V.Local.sParams.Set("AllVendors*!*MultiVendor*!*VendorSelection")
+F.Intrinsic.String.Build("{0}*!*{1}*!*{2}",V.Screen.SS_Form1!chk1_AllVendors.Value,V.Global.lMultiVendor,V.Global.sVendorSelection,V.Local.sValues)
+
+F.Global.BI.RunReportPreProcessor(V.Global.lBIRunID,V.Global.lLogID,V.Local.sParams,V.Local.sValues,"",-1,True,"",-1,"",-1,"","",V.Local.iRet)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("CallBI_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3609_AP_CON_VNDR.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.CallBI.End
+
+Program.Sub.Comments.Start
+${$0$}$BIR_AP_VNDR_Masters$}$SUPERVSR$}$5/26/2015
+Program.Sub.Comments.End
+Program.Sub.ScreenSS.Start
+SS_Form1{{CAPTION::Vendor Masters
+SS_Form1.CTRL{{NAME::txt1_BegVendor\\TYPE::2\\CAPTION::Beginning Vendor\\RANGE::lvw1_Vendor\\TABSTOP::1\\GROUP::1\\BROWSER::1\\INTL::64300\\SIZE::1
+SS_Form1.CTRL{{NAME::txt2_EndVendor\\TYPE::2\\CAPTION::Ending Vendor\\RANGE::lvw1_Vendor\\TABSTOP::2\\GROUP::1\\BROWSER::1\\INTL::216900\\SIZE::1
+SS_Form1.CTRL{{NAME::chk1_AllVendors\\TYPE::9\\CAPTION::All_Vendors\\TABSTOP::3\\GROUP::-1\\SUBGROUP::1\\BROWSER::0\\INTL::681007\\SIZE::1
+SS_Form1.CTRL{{NAME::lvw1_Vendor\\TYPE::7\\GROUP::-1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::cmd1_Print\\TYPE::5\\CAPTION::Print\\TABSTOP::4\\GROUP::-1\\BROWSER::0\\INTL::452800\\SIZE::1
+
+Program.Sub.ScreenSS.End
+
